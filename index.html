@@ -49,12 +49,12 @@
                 </div>
             </div>
             <div class="flex justify-center">
-                <img src="profile.jpg" alt="王诗雨" class="w-80 h-80 object-cover rounded-3xl shadow-2xl border-8 border-white/30">
+                <img src="profile.jpg" alt="王诗雨" class="w-72 h-96 object-cover rounded-3xl shadow-2xl border-8 border-white/30">
             </div>
         </div>
     </section>
 
-    <!-- About Me （现在移到最前面） -->
+    <!-- About Me （已移到最前面） -->
     <section id="about" class="max-w-6xl mx-auto px-6 py-20">
         <h2 class="text-5xl font-bold mb-10 text-center">About Me</h2>
         <div class="max-w-3xl mx-auto text-lg leading-relaxed space-y-6">
@@ -126,14 +126,14 @@
         </div>
     </section>
 
-    <!-- Projects （全部项目，相同格式） -->
+    <!-- Projects -->
     <section id="projects" class="max-w-6xl mx-auto px-6 py-20 bg-white">
         <h2 class="text-5xl font-bold text-center mb-4">Featured Projects</h2>
         <p class="text-center text-zinc-500 mb-12">Recent &amp; Selected Work</p>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- 1. HK Trip -->
+            <!-- 新项目1 -->
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-6">
                     <i class="fa-solid fa-brain text-4xl text-indigo-600"></i>
@@ -143,10 +143,10 @@
                     </div>
                 </div>
                 <p class="font-semibold text-indigo-700 text-lg">88% constraint compliance • 82.4% preference coverage</p>
-                <p class="mt-8 text-zinc-600 text-sm">Solely designed &amp; implemented Critic Agent (prompt + rule-based checks). <span class="highlight">Demonstrates my ability to build reliable multi-agent LLM systems with analytical precision.</span></p>
+                <p class="mt-8 text-zinc-600 text-sm">Solely designed &amp; implemented Critic Agent. <span class="highlight">Demonstrates my ability to build reliable multi-agent LLM systems.</span></p>
             </div>
 
-            <!-- 2. Titanic -->
+            <!-- 新项目2 -->
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-6">
                     <i class="fa-solid fa-chart-line text-4xl text-indigo-600"></i>
@@ -159,7 +159,7 @@
                 <p class="mt-8 text-zinc-600 text-sm">Solely owned all feature engineering. <span class="highlight">Demonstrates my analytical strength in turning raw data into high-impact features.</span></p>
             </div>
 
-            <!-- 3. Snake Game -->
+            <!-- 新项目3 -->
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-6">
                     <i class="fa-solid fa-gamepad text-4xl text-indigo-600"></i>
@@ -172,7 +172,7 @@
                 <p class="mt-8 text-zinc-600 text-sm">Sole developer. <span class="highlight">Showcases my strong foundation in reinforcement learning.</span></p>
             </div>
 
-            <!-- 4. Multi-Agent RAG -->
+            <!-- 旧项目1 -->
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-6">
                     <i class="fa-solid fa-robot text-4xl text-indigo-600"></i>
@@ -181,10 +181,10 @@
                         <p class="text-indigo-600">Feb 2026 – Present</p>
                     </div>
                 </div>
-                <p class="mt-8 text-zinc-600 text-sm">Sole developer of multi-agent system with Planner, Rewriter &amp; Retrieval agents. <span class="highlight">Demonstrates my expertise in RAG and intelligent systems architecture.</span></p>
+                <p class="mt-8 text-zinc-600 text-sm">Sole developer of multi-agent system. <span class="highlight">Demonstrates my expertise in RAG and intelligent systems.</span></p>
             </div>
 
-            <!-- 5. Email Classifier -->
+            <!-- 旧项目2 -->
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-6">
                     <i class="fa-solid fa-envelope text-4xl text-indigo-600"></i>
@@ -193,10 +193,10 @@
                         <p class="text-indigo-600">Sep 2025 – Dec 2026</p>
                     </div>
                 </div>
-                <p class="mt-8 text-zinc-600 text-sm">Hybrid rule + ML system. Accuracy improved from 75% to 92%. <span class="highlight">Demonstrates my cross-domain problem-solving skills.</span></p>
+                <p class="mt-8 text-zinc-600 text-sm">Hybrid rule + ML system. Accuracy 75% → 92%. <span class="highlight">Demonstrates my cross-domain problem-solving skills.</span></p>
             </div>
 
-            <!-- 6. Facial Expression Recognition -->
+            <!-- 旧项目3 -->
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-6">
                     <i class="fa-solid fa-face-smile text-4xl text-indigo-600"></i>
@@ -205,7 +205,7 @@
                         <p class="text-indigo-600">Sep 2024 – Apr 2025</p>
                     </div>
                 </div>
-                <p class="mt-8 text-zinc-600 text-sm">Lightweight CNN with model compression. 75.8% accuracy, +25 FPS. <span class="highlight">Demonstrates my computer vision and optimization capabilities.</span></p>
+                <p class="mt-8 text-zinc-600 text-sm">Lightweight CNN with compression. 75.8% accuracy, +25 FPS. <span class="highlight">Demonstrates my computer vision and optimization capabilities.</span></p>
             </div>
         </div>
     </section>
@@ -214,8 +214,7 @@
     <section id="resume" class="max-w-6xl mx-auto px-6 py-20 bg-zinc-100">
         <h2 class="text-4xl font-bold mb-8 text-center">Resume</h2>
         <div class="text-center">
-            <a href="resume.pdf" target="_blank"
-               class="inline-flex items-center gap-3 bg-indigo-600 text-white px-10 py-5 rounded-3xl text-lg font-medium hover:bg-indigo-700 transition">
+            <a href="resume.pdf" target="_blank" class="inline-flex items-center gap-3 bg-indigo-600 text-white px-10 py-5 rounded-3xl text-lg font-medium hover:bg-indigo-700 transition">
                 <i class="fas fa-download"></i>
                 Download Full Resume (PDF)
             </a>
