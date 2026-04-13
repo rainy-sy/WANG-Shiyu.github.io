@@ -9,17 +9,19 @@
     <style>
         body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
-        .project-card { transition: all 0.3s ease; }
-        .project-card:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+        .project-card { transition: all 0.4s ease; }
+        .project-card:hover { transform: translateY(-8px); box-shadow: 0 25px 30px -10px rgb(0 0 0 / 0.15); }
         html { scroll-behavior: smooth; }
+        .highlight { color: #4f46e5; font-weight: 700; }
     </style>
 </head>
 <body class="bg-zinc-50 text-zinc-900">
+
     <!-- Navbar -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-indigo-600">王诗雨</div>
-            <div class="flex gap-8 text-sm font-medium">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="text-3xl font-bold text-indigo-600">王诗雨</div>
+            <div class="flex gap-8 text-base font-medium">
                 <a href="#home" class="hover:text-indigo-600 transition">Home</a>
                 <a href="#about" class="hover:text-indigo-600 transition">About Me</a>
                 <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
@@ -31,31 +33,80 @@
     </nav>
 
     <!-- Home / Headline -->
-    <section id="home" class="hero-bg text-white py-24">
+    <section id="home" class="hero-bg text-white py-28">
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-                    Aspiring Artificial Intelligence Engineer<br>
-                    <span class="text-indigo-400">Specializing in Machine Learning & Large Model Applications</span>
+                <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6">
+                    Aspiring AI Engineer
                 </h1>
+                <p class="text-4xl text-indigo-300 mb-8">Specializing in Machine Learning &amp; Large Model Applications</p>
+                <p class="text-xl max-w-lg mb-10">I build reliable, production-ready AI systems — from advanced feature engineering to multi-agent LLM applications — that solve real business problems.</p>
                 <div class="flex flex-wrap gap-3">
-                    <span class="bg-white/10 px-5 py-2 rounded-full text-sm backdrop-blur">Machine Learning</span>
-                    <span class="bg-white/10 px-5 py-2 rounded-full text-sm backdrop-blur">Deep Learning</span>
-                    <span class="bg-white/10 px-5 py-2 rounded-full text-sm backdrop-blur">RAG</span>
-                    <span class="bg-white/10 px-5 py-2 rounded-full text-sm backdrop-blur">Reinforcement Learning</span>
-                    <span class="bg-white/10 px-5 py-2 rounded-full text-sm backdrop-blur">Computer Vision</span>
-                    <span class="bg-white/10 px-5 py-2 rounded-full text-sm backdrop-blur">PyTorch</span>
-                    <span class="bg-white/10 px-5 py-2 rounded-full text-sm backdrop-blur">PostgreSQL</span>
+                    <span class="bg-white/10 px-6 py-3 rounded-full text-lg backdrop-blur font-medium">Machine Learning</span>
+                    <span class="bg-white/10 px-6 py-3 rounded-full text-lg backdrop-blur font-medium">RAG &amp; Multi-Agent</span>
+                    <span class="bg-white/10 px-6 py-3 rounded-full text-lg backdrop-blur font-medium">Deep Learning</span>
+                    <span class="bg-white/10 px-6 py-3 rounded-full text-lg backdrop-blur font-medium">PyTorch</span>
                 </div>
             </div>
             <div class="flex justify-center">
-                <img src="profile.jpg" alt="王诗雨" class="w-72 h-72 object-cover rounded-3xl shadow-2xl border-8 border-white/30">
+                <img src="profile.jpg" alt="王诗雨" class="w-80 h-80 object-cover rounded-3xl shadow-2xl border-8 border-white/30">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects (最突出部分) -->
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-20 bg-white">
+        <h2 class="text-5xl font-bold text-center mb-4">Featured Projects</h2>
+        <p class="text-center text-zinc-500 mb-12">Recent work showcasing my technical depth and ownership</p>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- 1. HK Trip -->
+            <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fa-solid fa-brain text-4xl text-indigo-600"></i>
+                    <div>
+                        <h3 class="font-bold text-2xl">Hong Kong Intelligent Trip Planner</h3>
+                        <p class="text-indigo-600">Apr – May 2026</p>
+                    </div>
+                </div>
+                <p class="text-sm mb-6">Local LLM multi-agent system with Critic Agent</p>
+                <p class="font-semibold text-indigo-700 text-lg">88% constraint compliance • 82.4% preference coverage</p>
+                <p class="mt-8 text-zinc-600 text-sm">Solely designed and implemented the entire Critic Agent (prompt + rule-based checks for budget, schedule, preference &amp; weather). <span class="highlight">Demonstrates my ability to build reliable, production-ready LLM systems with analytical precision.</span></p>
+            </div>
+
+            <!-- 2. Titanic -->
+            <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fa-solid fa-chart-line text-4xl text-indigo-600"></i>
+                    <div>
+                        <h3 class="font-bold text-2xl">Titanic Survival Prediction</h3>
+                        <p class="text-indigo-600">Mar – Apr 2026</p>
+                    </div>
+                </div>
+                <p class="text-sm mb-6">Advanced feature engineering + ablation study</p>
+                <p class="font-semibold text-indigo-700 text-lg">Accuracy ↑2.23% • F1 ↑4.93%</p>
+                <p class="mt-8 text-zinc-600 text-sm">Solely owned all feature engineering (Title, FamilySize, AgePclass, FarePerPerson, etc.). <span class="highlight">Demonstrates my analytical strength in turning raw data into high-impact features that drive measurable model improvement.</span></p>
+            </div>
+
+            <!-- 3. Snake Game -->
+            <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fa-solid fa-gamepad text-4xl text-indigo-600"></i>
+                    <div>
+                        <h3 class="font-bold text-2xl">AI Snake Game (DQN)</h3>
+                        <p class="text-indigo-600">Feb – Mar 2026</p>
+                    </div>
+                </div>
+                <p class="text-sm mb-6">End-to-end Reinforcement Learning</p>
+                <p class="font-semibold text-indigo-700 text-lg">Successful policy learning</p>
+                <p class="mt-8 text-zinc-600 text-sm">Sole developer of complete DQN pipeline (PyTorch). <span class="highlight">Showcases my strong foundation in reinforcement learning and eagerness to learn through full-cycle experimentation.</span></p>
             </div>
         </div>
     </section>
 
     <!-- About Me -->
-    <section id="about" class="max-w-6xl mx-auto px-6 py-20">
+    <section id="about" class="max-w-6xl mx-auto px-6 py-20 bg-zinc-100">
         <h2 class="text-4xl font-bold mb-10 text-center">About Me</h2>
         <div class="max-w-3xl mx-auto text-lg leading-relaxed space-y-6">
             <p>Driven and analytical Artificial Intelligence graduate with strong expertise in machine learning, business analytics, and intelligent systems.</p>
@@ -79,10 +130,10 @@
                 <div>
                     <h3 class="font-semibold text-xl mb-3">Strengths</h3>
                     <ul class="list-disc pl-5 space-y-2">
-                        <li>End-to-end machine learning and deep learning pipeline development</li>
-                        <li>Multi-agent systems, RAG, and large model applications</li>
-                        <li>Real-time system optimization and model deployment</li>
-                        <li>Data-driven problem solving with business analytics mindset</li>
+                        <li>End-to-end ML/DL pipeline development</li>
+                        <li>Multi-agent LLM systems &amp; RAG applications</li>
+                        <li>Real-time system optimization</li>
+                        <li>Data-driven problem solving with business mindset</li>
                     </ul>
                 </div>
             </div>
@@ -101,7 +152,7 @@
                         <span class="px-6 py-3 bg-zinc-100 rounded-3xl text-sm">Deep Learning</span>
                         <span class="px-6 py-3 bg-zinc-100 rounded-3xl text-sm">Reinforcement Learning</span>
                         <span class="px-6 py-3 bg-zinc-100 rounded-3xl text-sm">Computer Vision</span>
-                        <span class="px-6 py-3 bg-zinc-100 rounded-3xl text-sm">RAG & Prompt Engineering</span>
+                        <span class="px-6 py-3 bg-zinc-100 rounded-3xl text-sm">RAG &amp; Prompt Engineering</span>
                     </div>
                 </div>
                 <div>
@@ -109,12 +160,12 @@
                     <div class="flex flex-wrap gap-3">
                         <span class="px-6 py-3 bg-zinc-100 rounded-3xl text-sm">Problem Framing</span>
                         <span class="px-6 py-3 bg-zinc-100 rounded-3xl text-sm">Data Storytelling</span>
-                        <span class="px-6 py-3 bg-zinc-100 rounded-3xl text-sm">Metrics & A/B Testing</span>
+                        <span class="px-6 py-3 bg-zinc-100 rounded-3xl text-sm">Metrics &amp; A/B Testing</span>
                         <span class="px-6 py-3 bg-zinc-100 rounded-3xl text-sm">Project Management</span>
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-indigo-600 font-semibold mb-4">Tools & Frameworks</h3>
+                    <h3 class="text-indigo-600 font-semibold mb-4">Tools &amp; Frameworks</h3>
                     <div class="flex flex-wrap gap-3">
                         <span class="px-6 py-3 bg-zinc-100 rounded-3xl text-sm">Python • SQL • R</span>
                         <span class="px-6 py-3 bg-zinc-100 rounded-3xl text-sm">PyTorch • Pandas • OpenCV</span>
@@ -126,62 +177,8 @@
         </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="max-w-6xl mx-auto px-6 py-20 bg-zinc-100">
-        <h2 class="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="project-card bg-white p-8 rounded-3xl shadow">
-                <h3 class="font-bold text-2xl mb-1">Multi-Agent RAG Question-Answering System</h3>
-                <p class="text-indigo-600 mb-6">Feb 2026 – Present</p>
-                <div class="space-y-4 text-sm">
-                    <p><strong>Problem:</strong> Built an intelligent multi-agent system to handle complex, knowledge-intensive queries with high accuracy and fluent responses.</p>
-                    <p><strong>Data:</strong> Multiple document corpora stored in PostgreSQL with pgvector vector embeddings.</p>
-                    <p><strong>Approach:</strong> FastAPI backend + three specialized agents (Planner, Query Rewriter, Retrieval Quality Gate) using pgvector, TF-IDF + RRF hybrid retrieval.</p>
-                    <p><strong>Outcome/Impact:</strong> Significantly improved retrieval quality and response fluency across multiple knowledge bases.</p>
-                    <p><strong>My Contribution:</strong> Sole developer — designed architecture, implemented all agents, integrated vector database, and conducted performance analysis.</p>
-                </div>
-            </div>
-
-            <div class="project-card bg-white p-8 rounded-3xl shadow">
-                <h3 class="font-bold text-2xl mb-1">AI Snake Game based on Deep Q-Learning</h3>
-                <p class="text-indigo-600 mb-6">Feb 2026 – Mar 2026</p>
-                <div class="space-y-4 text-sm">
-                    <p><strong>Problem:</strong> Developed an AI agent that learns to play Snake autonomously through reinforcement learning.</p>
-                    <p><strong>Data:</strong> Real-time Pygame environment with dynamic state representation (snake position, food, obstacles).</p>
-                    <p><strong>Approach:</strong> Deep Q-Network (DQN) implemented with PyTorch, including reward function, experience replay, and ε-greedy policy.</p>
-                    <p><strong>Outcome/Impact:</strong> Agent successfully learned optimal policy; training curve showed steady improvement in survival time and score.</p>
-                    <p><strong>My Contribution:</strong> Sole developer — complete implementation from environment setup to model training and evaluation.</p>
-                </div>
-            </div>
-
-            <div class="project-card bg-white p-8 rounded-3xl shadow">
-                <h3 class="font-bold text-2xl mb-1">Intelligent Email Auto-Classifier</h3>
-                <p class="text-indigo-600 mb-6">Sep 2025 – Dec 2026</p>
-                <div class="space-y-4 text-sm">
-                    <p><strong>Problem:</strong> Automated classification of high-volume emails to reduce manual processing time.</p>
-                    <p><strong>Data:</strong> Email dataset with text feature extraction stored in PostgreSQL knowledge base.</p>
-                    <p><strong>Approach:</strong> Hybrid rule-based engine + machine learning model with optimized classification pipeline.</p>
-                    <p><strong>Outcome/Impact:</strong> Improved classification accuracy from 75% to 92%.</p>
-                    <p><strong>My Contribution:</strong> Sole developer.</p>
-                </div>
-            </div>
-
-            <div class="project-card bg-white p-8 rounded-3xl shadow">
-                <h3 class="font-bold text-2xl mb-1">Facial Expression Recognition System</h3>
-                <p class="text-indigo-600 mb-6">Sep 2024 – Apr 2025</p>
-                <div class="space-y-4 text-sm">
-                    <p><strong>Problem:</strong> Created a lightweight real-time facial expression recognition system suitable for edge devices.</p>
-                    <p><strong>Data:</strong> FER2013 dataset (35,887 images across 7 emotion classes).</p>
-                    <p><strong>Approach:</strong> Improved Mini-Xception network with depthwise separable convolutions, model compression (4.8MB → 1.2MB), and PyQt5 + OpenCV multi-input interface.</p>
-                    <p><strong>Outcome/Impact:</strong> Achieved 75.8% accuracy and increased inference speed by 25 FPS.</p>
-                    <p><strong>My Contribution:</strong> Sole developer — architecture improvement, compression, deployment, and benchmarking.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Resume -->
-    <section id="resume" class="max-w-6xl mx-auto px-6 py-20">
+    <section id="resume" class="max-w-6xl mx-auto px-6 py-20 bg-zinc-100">
         <h2 class="text-4xl font-bold mb-8 text-center">Resume</h2>
         <div class="text-center">
             <a href="resume.pdf" target="_blank"
@@ -196,13 +193,13 @@
     <section id="contact" class="bg-zinc-900 text-white py-20">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
-            <p class="text-2xl mb-10">shiyuwang5@ln.hk</p>
+            <p class="text-3xl mb-8">shiyuwang5@ln.hk</p>
             <p class="text-zinc-400">Phone: +86 159 9958 8606</p>
         </div>
     </section>
 
     <footer class="bg-white py-8 text-center text-sm text-zinc-500">
-        © 2026 王诗雨 • Built with GitHub Pages
+        © 2026 王诗雨 • Built to showcase analytical AI engineering skills
     </footer>
 </body>
 </html>
