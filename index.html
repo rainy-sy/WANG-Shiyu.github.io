@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>王诗雨 | AI Engineer</title>
+    <title>WANG Shiyu | AI Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
@@ -13,6 +13,15 @@
         .project-card:hover { transform: translateY(-8px); box-shadow: 0 25px 30px -10px rgb(0 0 0 / 0.15); }
         html { scroll-behavior: smooth; }
         .highlight { color: #4f46e5; font-weight: 700; }
+        
+        /* 简洁尊重动画 */
+        .fade-in {
+            animation: fadeInUp 1.2s ease forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body class="bg-zinc-50 text-zinc-900">
@@ -20,7 +29,7 @@
     <!-- Navbar -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="text-3xl font-bold text-indigo-600">王诗雨</div>
+            <div class="text-3xl font-bold text-indigo-600">WANG Shiyu</div>
             <div class="flex gap-8 text-base font-medium">
                 <a href="#home" class="hover:text-indigo-600 transition">Home</a>
                 <a href="#about" class="hover:text-indigo-600 transition">About Me</a>
@@ -36,12 +45,20 @@
     <section id="home" class="hero-bg text-white py-28">
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6">
-                    Aspiring AI Engineer
+                <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6 fade-in">
+                    Aspiring Artificial Intelligence Engineer
                 </h1>
-                <p class="text-4xl text-indigo-300 mb-8">Specializing in Machine Learning &amp; Large Model Applications</p>
-                <p class="text-xl max-w-lg mb-10">I build reliable, production-ready AI systems — from advanced feature engineering to multi-agent LLM applications — that solve real business problems.</p>
-                <div class="flex flex-wrap gap-3">
+                <p class="text-4xl text-indigo-300 mb-8 fade-in" style="animation-delay: 0.2s;">
+                    Machine Learning &amp; Large Model Applications
+                </p>
+                
+                <!-- 欢迎语（低调、专业、突出个人特质） -->
+                <p class="text-xl max-w-lg mb-10 fade-in" style="animation-delay: 0.4s;">
+                    Welcome! I'm WANG Shiyu, an analytical AI engineer with a strong passion for machine learning and large model applications. 
+                    I thrive on cross-domain problem solving and responsible innovation — always eager to learn and create meaningful impact.
+                </p>
+
+                <div class="flex flex-wrap gap-3 fade-in" style="animation-delay: 0.6s;">
                     <span class="bg-white/10 px-6 py-3 rounded-full text-lg backdrop-blur font-medium">Machine Learning</span>
                     <span class="bg-white/10 px-6 py-3 rounded-full text-lg backdrop-blur font-medium">RAG &amp; Multi-Agent</span>
                     <span class="bg-white/10 px-6 py-3 rounded-full text-lg backdrop-blur font-medium">Deep Learning</span>
@@ -49,42 +66,41 @@
                 </div>
             </div>
             <div class="flex justify-center">
-                <img src="profile.jpg" alt="王诗雨" class="w-72 h-96 object-cover rounded-3xl shadow-2xl border-8 border-white/30">
+                <img src="profile.jpg" alt="WANG Shiyu" class="w-72 h-96 object-cover rounded-3xl shadow-2xl border-8 border-white/30">
             </div>
         </div>
     </section>
 
-    <!-- About Me （已移到最前面） -->
-    <section id="about" class="max-w-6xl mx-auto px-6 py-20">
-        <h2 class="text-5xl font-bold mb-10 text-center">About Me</h2>
-        <div class="max-w-3xl mx-auto text-lg leading-relaxed space-y-6">
-            <p>Driven and analytical Artificial Intelligence graduate with strong expertise in machine learning, business analytics, and intelligent systems.</p>
-            <p>Skilled in cross-domain problem solving, clear communication and storytelling, with hands-on experience in project management and a strong eagerness to learn and adapt to new technologies.</p>
-            <p>Motivated to build a long-term career in artificial intelligence, aspiring to drive responsible innovation and create positive societal impact through continuous learning and meaningful solutions.</p>
-            
-            <div class="grid md:grid-cols-2 gap-8 mt-12">
-                <div>
-                    <h3 class="font-semibold text-xl mb-3">Education</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <p class="font-medium">MSc Artificial Intelligence and Business Analytics</p>
-                            <p class="text-zinc-600">Lingnan University, Hong Kong • Expected 2027</p>
-                        </div>
-                        <div>
-                            <p class="font-medium">BSc Artificial Intelligence</p>
-                            <p class="text-zinc-600">Minnan Normal University • GPA 3.4/4.0 • 2021–2025</p>
-                        </div>
+    <!-- About Me -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-20 bg-white">
+        <h2 class="text-5xl font-bold mb-12 text-center">About Me</h2>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+            <div class="space-y-8">
+                <p class="text-lg leading-relaxed">Driven and analytical Artificial Intelligence graduate with strong expertise in machine learning, business analytics, and intelligent systems.</p>
+                <p class="text-lg leading-relaxed">Skilled in cross-domain problem solving, clear communication and storytelling, with hands-on experience in project management and a strong eagerness to learn and adapt to new technologies.</p>
+                <p class="text-lg leading-relaxed">Motivated to build a long-term career in artificial intelligence, aspiring to drive responsible innovation and create positive societal impact through continuous learning and meaningful solutions.</p>
+            </div>
+
+            <div class="bg-zinc-50 p-8 rounded-3xl">
+                <h3 class="font-semibold text-xl mb-6">Education</h3>
+                <div class="space-y-6">
+                    <div>
+                        <p class="font-medium">MSc Artificial Intelligence and Business Analytics</p>
+                        <p class="text-zinc-600">Lingnan University, Hong Kong • Expected 2027</p>
+                    </div>
+                    <div>
+                        <p class="font-medium">BSc Artificial Intelligence</p>
+                        <p class="text-zinc-600">Minnan Normal University • GPA 3.4/4.0 • 2021–2025</p>
                     </div>
                 </div>
-                <div>
-                    <h3 class="font-semibold text-xl mb-3">Strengths</h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>End-to-end ML/DL pipeline development</li>
-                        <li>Multi-agent LLM systems &amp; RAG applications</li>
-                        <li>Real-time system optimization</li>
-                        <li>Data-driven problem solving with business mindset</li>
-                    </ul>
-                </div>
+
+                <h3 class="font-semibold text-xl mt-10 mb-4">Strengths</h3>
+                <ul class="list-disc pl-5 space-y-3 text-zinc-700">
+                    <li>End-to-end ML/DL pipeline development</li>
+                    <li>Multi-agent LLM systems &amp; RAG applications</li>
+                    <li>Real-time system optimization</li>
+                    <li>Data-driven problem solving with business mindset</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -133,7 +149,7 @@
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- 新项目1 -->
+            <!-- 新项目 -->
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-6">
                     <i class="fa-solid fa-brain text-4xl text-indigo-600"></i>
@@ -146,7 +162,6 @@
                 <p class="mt-8 text-zinc-600 text-sm">Solely designed &amp; implemented Critic Agent. <span class="highlight">Demonstrates my ability to build reliable multi-agent LLM systems.</span></p>
             </div>
 
-            <!-- 新项目2 -->
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-6">
                     <i class="fa-solid fa-chart-line text-4xl text-indigo-600"></i>
@@ -159,7 +174,6 @@
                 <p class="mt-8 text-zinc-600 text-sm">Solely owned all feature engineering. <span class="highlight">Demonstrates my analytical strength in turning raw data into high-impact features.</span></p>
             </div>
 
-            <!-- 新项目3 -->
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-6">
                     <i class="fa-solid fa-gamepad text-4xl text-indigo-600"></i>
@@ -172,7 +186,7 @@
                 <p class="mt-8 text-zinc-600 text-sm">Sole developer. <span class="highlight">Showcases my strong foundation in reinforcement learning.</span></p>
             </div>
 
-            <!-- 旧项目1 -->
+            <!-- 老项目 -->
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-6">
                     <i class="fa-solid fa-robot text-4xl text-indigo-600"></i>
@@ -184,7 +198,6 @@
                 <p class="mt-8 text-zinc-600 text-sm">Sole developer of multi-agent system. <span class="highlight">Demonstrates my expertise in RAG and intelligent systems.</span></p>
             </div>
 
-            <!-- 旧项目2 -->
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-6">
                     <i class="fa-solid fa-envelope text-4xl text-indigo-600"></i>
@@ -196,7 +209,6 @@
                 <p class="mt-8 text-zinc-600 text-sm">Hybrid rule + ML system. Accuracy 75% → 92%. <span class="highlight">Demonstrates my cross-domain problem-solving skills.</span></p>
             </div>
 
-            <!-- 旧项目3 -->
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-6">
                     <i class="fa-solid fa-face-smile text-4xl text-indigo-600"></i>
@@ -231,7 +243,7 @@
     </section>
 
     <footer class="bg-white py-8 text-center text-sm text-zinc-500">
-        © 2026 王诗雨 • Built to showcase analytical AI engineering skills
+        © 2026 WANG Shiyu • Built to showcase analytical AI engineering skills
     </footer>
 </body>
 </html>
