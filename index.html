@@ -9,19 +9,8 @@
     <style>
         body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
-        .project-card { transition: all 0.4s ease; }
-        .project-card:hover { transform: translateY(-8px); box-shadow: 0 25px 30px -10px rgb(0 0 0 / 0.15); }
-        html { scroll-behavior: smooth; }
-        .highlight { color: #4f46e5; font-weight: 700; }
-        
-        /* 简洁尊重动画 */
-        .fade-in {
-            animation: fadeInUp 1.2s ease forwards;
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        .project-card { transition: all 0.3s ease; }
+        .project-card:hover { transform: translateY(-4px); box-shadow: 0 15px 20px -5px rgb(0 0 0 / 0.1); }
     </style>
 </head>
 <body class="bg-zinc-50 text-zinc-900">
@@ -45,20 +34,20 @@
     <section id="home" class="hero-bg text-white py-28">
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6 fade-in">
+                <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6">
                     Aspiring Artificial Intelligence Engineer
                 </h1>
-                <p class="text-4xl text-indigo-300 mb-8 fade-in" style="animation-delay: 0.2s;">
+                <p class="text-4xl text-indigo-300 mb-8">
                     Machine Learning &amp; Large Model Applications
                 </p>
                 
-                <!-- 欢迎语（低调、专业、突出个人特质） -->
-                <p class="text-xl max-w-lg mb-10 fade-in" style="animation-delay: 0.4s;">
+                <!-- 小字欢迎语（放在最上面，低调专业） -->
+                <p class="text-lg max-w-lg mb-10 text-indigo-100">
                     Welcome! I'm WANG Shiyu, an analytical AI engineer with a strong passion for machine learning and large model applications. 
                     I thrive on cross-domain problem solving and responsible innovation — always eager to learn and create meaningful impact.
                 </p>
 
-                <div class="flex flex-wrap gap-3 fade-in" style="animation-delay: 0.6s;">
+                <div class="flex flex-wrap gap-3">
                     <span class="bg-white/10 px-6 py-3 rounded-full text-lg backdrop-blur font-medium">Machine Learning</span>
                     <span class="bg-white/10 px-6 py-3 rounded-full text-lg backdrop-blur font-medium">RAG &amp; Multi-Agent</span>
                     <span class="bg-white/10 px-6 py-3 rounded-full text-lg backdrop-blur font-medium">Deep Learning</span>
@@ -149,7 +138,6 @@
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- 新项目 -->
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-6">
                     <i class="fa-solid fa-brain text-4xl text-indigo-600"></i>
@@ -159,7 +147,7 @@
                     </div>
                 </div>
                 <p class="font-semibold text-indigo-700 text-lg">88% constraint compliance • 82.4% preference coverage</p>
-                <p class="mt-8 text-zinc-600 text-sm">Solely designed &amp; implemented Critic Agent. <span class="highlight">Demonstrates my ability to build reliable multi-agent LLM systems.</span></p>
+                <p class="mt-8 text-zinc-600 text-sm">Solely designed &amp; implemented Critic Agent (prompt + rule-based checks). Demonstrates my ability to build reliable multi-agent LLM systems.</p>
             </div>
 
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
@@ -171,7 +159,7 @@
                     </div>
                 </div>
                 <p class="font-semibold text-indigo-700 text-lg">Accuracy ↑2.23% • F1 ↑4.93%</p>
-                <p class="mt-8 text-zinc-600 text-sm">Solely owned all feature engineering. <span class="highlight">Demonstrates my analytical strength in turning raw data into high-impact features.</span></p>
+                <p class="mt-8 text-zinc-600 text-sm">Solely owned all feature engineering. Demonstrates my analytical strength in turning raw data into high-impact features.</p>
             </div>
 
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
@@ -183,10 +171,9 @@
                     </div>
                 </div>
                 <p class="font-semibold text-indigo-700 text-lg">Successful policy learning</p>
-                <p class="mt-8 text-zinc-600 text-sm">Sole developer. <span class="highlight">Showcases my strong foundation in reinforcement learning.</span></p>
+                <p class="mt-8 text-zinc-600 text-sm">Sole developer. Showcases my strong foundation in reinforcement learning.</p>
             </div>
 
-            <!-- 老项目 -->
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
                 <div class="flex items-center gap-3 mb-6">
                     <i class="fa-solid fa-robot text-4xl text-indigo-600"></i>
@@ -195,7 +182,7 @@
                         <p class="text-indigo-600">Feb 2026 – Present</p>
                     </div>
                 </div>
-                <p class="mt-8 text-zinc-600 text-sm">Sole developer of multi-agent system. <span class="highlight">Demonstrates my expertise in RAG and intelligent systems.</span></p>
+                <p class="mt-8 text-zinc-600 text-sm">Sole developer of multi-agent system. Demonstrates my expertise in RAG and intelligent systems.</p>
             </div>
 
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
@@ -206,7 +193,7 @@
                         <p class="text-indigo-600">Sep 2025 – Dec 2026</p>
                     </div>
                 </div>
-                <p class="mt-8 text-zinc-600 text-sm">Hybrid rule + ML system. Accuracy 75% → 92%. <span class="highlight">Demonstrates my cross-domain problem-solving skills.</span></p>
+                <p class="mt-8 text-zinc-600 text-sm">Hybrid rule + ML system. Accuracy 75% → 92%. Demonstrates my cross-domain problem-solving skills.</p>
             </div>
 
             <div class="project-card bg-white border border-zinc-100 p-8 rounded-3xl shadow">
@@ -217,7 +204,7 @@
                         <p class="text-indigo-600">Sep 2024 – Apr 2025</p>
                     </div>
                 </div>
-                <p class="mt-8 text-zinc-600 text-sm">Lightweight CNN with compression. 75.8% accuracy, +25 FPS. <span class="highlight">Demonstrates my computer vision and optimization capabilities.</span></p>
+                <p class="mt-8 text-zinc-600 text-sm">Lightweight CNN with compression. 75.8% accuracy, +25 FPS. Demonstrates my computer vision and optimization capabilities.</p>
             </div>
         </div>
     </section>
